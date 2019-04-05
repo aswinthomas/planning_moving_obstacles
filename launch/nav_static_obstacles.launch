@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find turtlebot_moving_obstacles)/launch/static_world.launch"/>
+  <include file="$(find turtlebot_moving_obstacles)/launch/turtlebot_bringup.launch"/>
+</launch>

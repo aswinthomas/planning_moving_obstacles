@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>turtlebot_moving_obstacles</name>
+  <version>0.0.0</version>
+  <description>The planning_moving_obstacles package</description>
+
+  <maintainer email="aswinthomas@gmail.com">Aswin Thomas</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>turtlebot3-gazebo</depend>
+  <depend>turtlebot3-navigation</depend>
+  <depend>turtlebot3-slam</depend>
+  <depend>gazebo_plugins</depend>
+  <depend>gazebo_ros_control</depend>
+  <depend>cartograoher_ros</depend>
+  <depend>dwa_local_planner</depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
