@@ -16,9 +16,12 @@
   <depend>turtlebot3-slam</depend>
   <depend>gazebo_plugins</depend>
   <depend>gazebo_ros_control</depend>
-  <depend>cartograoher_ros</depend>
+  <depend>cartographer_ros</depend>
   <depend>dwa_local_planner</depend>
   <depend>gazebo_ros</depend>
+  <depend>tuw_aruco</depend>
+  <depend>backward_ros</depend>
+  <depend>navigation_experimental</depend>
 
 
   <export>

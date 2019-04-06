@@ -10,8 +10,8 @@
 - ```cd ~/catkin_ws/src && wstool init .```
 - ```wstool merge -t . turtlebot_moving_obstacles/.rosinstall```
 - ```wstool update .```
-- Install deps using ```rosdep install --from-paths WORKSPACE --ignore-src --rosdistro=ROSDISTRO```
-- Finally compile using ```catkin b```
+- Install deps using ```rosdep install --from-paths . --ignore-src --rosdistro=ROSDISTRO```
+- Finally compile using ```catkin b --save-config --cmake-args -DCMAKE_BUILD_TYPE=Release```
 - Set environment variable for model ```export TURTLEBOT3_MODEL=waffle```
 
 ### Simulation environment

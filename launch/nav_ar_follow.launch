@@ -1,0 +1,37 @@
+
+<launch>
+  <include file="$(find turtlebot_moving_obstacles)/launch/ar_world.launch"/>
+  <include file="$(find turtlebot_moving_obstacles)/launch/turtlebot_bringup.launch"/>
+
+  <arg name="camera" default="camera"/>
+  <arg name="image" default="rgb/image_raw"/>
+  <node pkg="tuw_aruco" type="aruco_node" name="arMarkerAruco" output="screen">
+    <param name="show_debug_image" value="true"/>
+    <param name="marker_dictonary" value="ARUCO"/>
+    <param name="marker_size" value="0.2"/>
+    <param name="publish_tf" value="true"/>
+    <param name="publish_markers" value="true"/>
+    <param name="publish_fiducials" value="true"/>
+    <param name="pose_estimation_enabled" value="true"/>
+    <remap from="image" to="$(arg camera)/$(arg image)"/>
+    <remap from="camera_info" to="$(arg camera)/camera_info"/>
+  </node>
+
+  <!-- Arguments -->
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="map_file" default="$(find turtlebot_moving_obstacles)/config/map-dynamic.yaml"/>
+  <arg name="move_forward_only" default="false"/>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find turtlebot3_navigation)/launch/amcl.launch"/>
+
+  <!-- Aruco follower -->
+  <node pkg="turtlebot_moving_obstacles" name="aruco_follower" type="aruco_follower_node" output="screen">
+    <param name="lin_vel_scale" value="0.5"/>
+    <param name="ang_vel_scale" value="0.1"/>    
+  </node>
+
+</launch>

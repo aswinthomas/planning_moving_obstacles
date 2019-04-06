@@ -2,3 +2,11 @@
     local-name: turtlebot3
     uri: https://github.com/aswinthomas/turtlebot3
     version: master
+- git:
+    local-name: tuw_marker_detection
+    uri: https://github.com/tuw-robotics/tuw_marker_detection
+    version: melodic
+- git:
+    local-name: marker_rviz_plugin
+    uri: https://github.com/tuw-robotics/marker_rviz_plugin
+    version: melodic

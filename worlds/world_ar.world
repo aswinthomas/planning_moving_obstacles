@@ -332,7 +332,7 @@
         <visual name='visual'>
           <geometry>
             <box>
-              <size>0.1778 0.1778 1e-05</size>
+              <size>0.2 0.2 1e-05</size>
             </box>
           </geometry>
           <material>
@@ -359,7 +359,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.1778 0.1778 1e-05</size>
+              <size>0.2 0.2 1e-05</size>
             </box>
           </geometry>
           <surface>
@@ -384,7 +384,7 @@
         <visual name='visual'>
           <geometry>
             <box>
-              <size>0.1778 0.1778 1e-05</size>
+              <size>0.2 0.2 1e-05</size>
             </box>
           </geometry>
           <material>
@@ -410,7 +410,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.1778 0.1778 1e-05</size>
+              <size>0.2 0.2 1e-05</size>
             </box>
           </geometry>
           <surface>
@@ -449,14 +449,13 @@
       </joint>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>1 0 0.2 0 -1.57 0</pose>
+      <pose frame=''>1 0.3 0.2 0 -1.57 0</pose>
       <plugin name="push_animate" filename="libbox_animator.so">
-        <time_interval>15.0</time_interval>
+        <time_interval>40.0</time_interval>
         <num_positions>4</num_positions>
         <height>0.2</height>
         <pitch>-1.57</pitch>
         <roll>0</roll>
-        <!-- x,y,yaw -->
         <positions>1 0 0  3 -3 -1.57  0 -6 -3.14 -3 -3 -4.71  1 0 -6.28</positions>
       </plugin>
     </model>
