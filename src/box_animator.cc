@@ -18,6 +18,16 @@ namespace gazebo
       if (_sdf->HasElement("time_interval"))
     interval = _sdf->Get<double>("time_interval");
 
+        double height=0;
+      if (_sdf->HasElement("height"))
+    height = _sdf->Get<double>("height");
+          double pitch=0;
+      if (_sdf->HasElement("pitch"))
+    pitch = _sdf->Get<double>("pitch");
+          double roll=0;
+      if (_sdf->HasElement("roll"))
+    roll = _sdf->Get<double>("roll");
+
 int num_positions=0;
         if (_sdf->HasElement("num_positions"))
     num_positions = _sdf->Get<double>("num_positions");
@@ -33,13 +43,13 @@ std::stringstream ss;
         gazebo::common::PoseKeyFrame *key;
 
 double timestamp=0;
-double x,y;
+double x,y,yaw;
         while(!ss.eof()) {
-          ss>>x>>y;
+          ss>>x>>y>>yaw;
 key = anim->CreateKeyFrame(timestamp);
 timestamp+=interval;
-        key->Translation(ignition::math::Vector3d(x, y, 0));
-        key->Rotation(ignition::math::Quaterniond(0, 0, 0));
+        key->Translation(ignition::math::Vector3d(x, y, height));
+        key->Rotation(ignition::math::Quaterniond(roll, pitch, yaw));
         }
  
         // set the animation

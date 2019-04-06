@@ -14,8 +14,10 @@
 - Finally compile using ```catkin b```
 - Set environment variable for model ```export TURTLEBOT3_MODEL=waffle```
 
+### Simulation environment
+
 ### Navigation in a static environment
-The simulation enviroment is a 10m x 10m world with cuble obstacles.
+The simulation enviroment is a 10m x 10m world with cube obstacles.
 
 A map must be initially created by launching ```roslaunch turtlebot_moving_obstacles nav_static_obstacles.launch```. This has already been created in the config folder. 
 
@@ -26,3 +28,4 @@ After launching ```roslaunch turtlebot_moving_obstacles nav_static_obstacles.lau
 [![Nav in static obstacles](https://img.youtube.com/vi/riDBhGZQAwY/0.jpg)](https://www.youtube.com/watch?v=riDBhGZQAwY)
 
 ### Navigation in a dynamic environment
+[![Nav in dynamic obstacles](https://img.youtube.com/vi/SoZExEGgNP4/0.jpg)](https://www.youtube.com/watch?v=SoZExEGgNP4)
