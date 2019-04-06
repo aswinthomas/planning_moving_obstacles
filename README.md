@@ -29,3 +29,9 @@ After launching ```roslaunch turtlebot_moving_obstacles nav_static_obstacles.lau
 
 ### Navigation in a dynamic environment
 [![Nav in dynamic obstacles](https://img.youtube.com/vi/SoZExEGgNP4/0.jpg)](https://www.youtube.com/watch?v=SoZExEGgNP4)
+
+
+### AR code follower
+
+[![Nav in dynamic obstacles](https://img.youtube.com/vi/1gM4WWvazS0/0.jpg)](https://www.youtube.com/watch?v=1gM4WWvazS0)
+1gM4WWvazS0
