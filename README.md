@@ -38,15 +38,19 @@ AMCL is then used for localization within the map.
 
 ### Navigation in a static environment
 
+The simulation can be run using ```roslaunch turtlebot_moving_obstacles nav_static_obstacles.launch```. A nav goal can be set from rviz to visualize navigation to the goal. This is shown in video below.
+
+
 The objective here is to enable the robot to navigate in a static and known environment. ```move_base``` is used as the navigation framework and the created map serves as the prior information of all obstacles and will be part of the global costmap. This enables the robot to navigate to its goal even if the sensors are not able to view all obstacles. The respective config files used for ```move_base``` can be found [here](https://github.com/aswinthomas/turtlebot3/tree/master/turtlebot3_navigation/param)
 
 [navfn](https://wiki.ros.org/navfn) is used as the global planner and [dwa_local_planner](https://wiki.ros.org/dwa_local_planner) is used as the local planner. The local planner params can be found [here](https://github.com/aswinthomas/turtlebot3/blob/master/turtlebot3_navigation/param/dwa_local_planner_params_waffle.yaml)
 
-The simulation can be run using ```roslaunch turtlebot_moving_obstacles nav_static_obstacles.launch```. A nav goal can be set from rviz to visualize navigation to the goal. This is shown in video below.
-
 [![Nav in static obstacles](https://img.youtube.com/vi/riDBhGZQAwY/0.jpg)](https://www.youtube.com/watch?v=riDBhGZQAwY)
 
 ### Navigation in a dynamic environment
+
+The simulation can be run using ```roslaunch turtlebot_moving_obstacles nav_dynamic_obstacles.launch```. A nav goal can be set from rviz to visualize navigation to the goal. This is shown in video below.
+
 The objective here is to enable navigation in a dynamic environment. The static box objects are now animated using the animator plugin mentioned above.
 
 The framework used is similar to that of the previous step, except that [teb_local_planner](https://wiki.ros.org/teb_local_planner) ishe config file can be found [here](https://github.com/aswinthomas/turtlebot3/blob/master/turtlebot3_navigation/param/teb_local_planner_params.yaml)
@@ -55,8 +59,11 @@ The framework used is similar to that of the previous step, except that [teb_loc
 
 
 ### AR code follower
+
+The simulation can be run using ```roslaunch turtlebot_moving_obstacles nav_ar_follow.launch```. A nav goal can be set from rviz to visualize navigation to the goal. This is shown in video below.
+
 The objective here is to follow an AR code moving in the simulation. An Aruco code model is created in the ```models``` folder and animated similar to the box above. For the Aruco marker detection, [tuw_aruco](https://wiki.ros.org/tuw_aruco) is used and this publishes out markers in the camera view.
 
-A simple follower node [here](src/aruco_follower.cc) subscribes to the detected aruco markers and provides simple P control commands to move the robot towards it. This can be run using ```roslaunch turtlebot_moving_obstacles nav_ar_follow.launch``` and is shown in the video below.
+A simple follower node [here](src/aruco_follower.cc) subscribes to the detected aruco markers and provides simple P control commands to move the robot towards it. 
 
 [![Nav in dynamic obstacles](https://img.youtube.com/vi/1gM4WWvazS0/0.jpg)](https://www.youtube.com/watch?v=1gM4WWvazS0)
