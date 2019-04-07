@@ -60,7 +60,7 @@ The framework used is similar to that of the previous step, except that [teb_loc
 
 ### AR code follower
 
-The simulation can be run using ```roslaunch turtlebot_moving_obstacles nav_ar_follow.launch```. A nav goal can be set from rviz to visualize navigation to the goal. This is shown in video below.
+The simulation can be run using ```roslaunch turtlebot_moving_obstacles nav_ar_follow.launch```. This is shown in video below.
 
 The objective here is to follow an AR code moving in the simulation. An Aruco code model is created in the ```models``` folder and animated similar to the box above. For the Aruco marker detection, [tuw_aruco](https://wiki.ros.org/tuw_aruco) is used and this publishes out markers in the camera view.
 
