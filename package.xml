@@ -11,9 +11,9 @@
   <buildtool_depend>catkin</buildtool_depend>
   <depend>roscpp</depend>
   <depend>std_msgs</depend>
-  <depend>turtlebot3-gazebo</depend>
-  <depend>turtlebot3-navigation</depend>
-  <depend>turtlebot3-slam</depend>
+  <depend>turtlebot3_gazebo</depend>
+  <depend>turtlebot3_navigation</depend>
+  <depend>turtlebot3_slam</depend>
   <depend>gazebo_plugins</depend>
   <depend>gazebo_ros_control</depend>
   <depend>cartographer_ros</depend>
