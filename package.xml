@@ -21,7 +21,6 @@
   <depend>gazebo_ros</depend>
   <depend>tuw_aruco</depend>
   <depend>backward_ros</depend>
-  <depend>navigation_experimental</depend>
 
 
   <export>
